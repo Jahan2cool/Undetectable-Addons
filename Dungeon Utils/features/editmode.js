@@ -46,6 +46,6 @@ register("command", (...args) => {
               //World.getWorld().func_175698_g(new BlockPoss(la.getX(), la.getY(), la.getZ()))
               World.getWorld().setBlockState(new BlockPoss(la.getX(), la.getY(), la.getZ()), Blocks.stained_glass.getDefaultState())
         //setblocktoair:func_175698_g
-        //setblockstate:setBlockState
+        //setblockstate:func_180501_a or func_175656_a(Might Ban)
       }
   })
