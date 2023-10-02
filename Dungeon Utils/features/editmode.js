@@ -42,9 +42,9 @@ register("command", (...args) => {
       if (editmode === true && editbind.isPressed()) {
           const la = Player.lookingAt()
           if (la.getClass() !== Block || exclude.includes(la.type.getRegistryName())) { return }
-          chatLib.chat("Blocks.DIAMOND_BLOCK.getDefaultState()")
-          //World.getWorld().func_175698_g(new BlockPoss(la.getX(), la.getY(), la.getZ()), Blocks.DIAMOND_BLOCK.getDefaultState())
+          World.getWorld().func_175698_g(new BlockPoss(la.getX(), la.getY(), la.getZ()))
+          World.getWorld().setBlockState(new BlockPoss(la.getX(), la.getY(), la.getZ()), Blocks.glass.getDefaultState())
         //setblocktoair:func_175698_g
-        //setblockstate:
+        //setblockstate:setBlockState
       }
   })
