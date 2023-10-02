@@ -39,11 +39,12 @@ register("command", (...args) => {
 
   register("tick", () => {
       //return
-      if (editmode === true && editbind.isPressed()) {
-          const la = Player.lookingAt()
-          if (la.getClass() !== Block || exclude.includes(la.type.getRegistryName())) { return }
-          //World.getWorld().func_175698_g(new BlockPoss(la.getX(), la.getY(), la.getZ()))
-          World.getWorld().setBlockState(new BlockPoss(la.getX(), la.getY(), la.getZ()), Blocks.glass.getDefaultState())
+      if (editmode === true ) {
+          if (editbind.isPressed()) {
+              const la = Player.lookingAt()
+              if (la.getClass() !== Block || exclude.includes(la.type.getRegistryName())) { return }
+              //World.getWorld().func_175698_g(new BlockPoss(la.getX(), la.getY(), la.getZ()))
+              World.getWorld().setBlockState(new BlockPoss(la.getX(), la.getY(), la.getZ()), Blocks.stained_glass.getDefaultState())
         //setblocktoair:func_175698_g
         //setblockstate:setBlockState
       }
